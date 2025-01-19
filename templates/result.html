@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css')}}" />
+    <h1 class="main-title">Result</h1>
+
+    {% if match_score is not none %}
+    <p class="use">Your resume has been uploaded successfully!</p>
+    <p class="welcome"><b>Match Score:</b> {{ "%.2f"|format(match_score) }}%</p>
+    {% else %}
+    <p class="welcome">Unable to calculate match score. Please try again.</p>
+    {% endif %}
+
+    <nav>
+      <a
+        class="link2"
+        href="/upload"
+        style="font-size: 18px; text-decoration: none"
+        >Go to Upload Page</a
+      >
+      <br />
+      <br />
+      <br />
+      <a class="link2" href="/" style="font-size: 18px; text-decoration: none"
+        >Go to Home Page</a
+      >
+    </nav>
+    <br /><br />
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Screening Results</title>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/results.css')}}"
+  />
+  </head>
+  <body>
+    <h1 class="main-title">Resume Screening Results</h1>
+    <br>
+    
+    <nav>
+      <a class="link2" href="/upload">Upload a New Resume</a>
+    </nav>
+    <br>
+    <br>
+   
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table-text">ID</th>
+          <th class="table-text" >Name</th>
+          <th class="table-text" >Resume Text</th>
+          <th class="table-text" >Job Description</th>
+          <th class="table-text" >Match Score</th>
+          <th class="table-text" >Uploaded At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in results %}
+        <tr>
+          <td>{{ row.id }}</td>
+          <td>{{ row.user_name }}</td>
+          <td>{{ row.resume_text }}</td>
+          <td>{{ row.job_description }}</td>
+          <td>{{ "%.2f"|format(row.match_score) }}%</td>
+          <td>{{ row.created_at }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

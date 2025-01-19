@@ -1,0 +1,96 @@
+html, body {
+    height: 100%; /* Ensure body takes full height of viewport */
+    margin: 0; /* Remove default margin */
+  
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    font-family: Arial, sans-serif; /* Font style */
+    background-color: #ffffff; /* Background color */
+    align-content: center;
+  }
+
+
+@keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+
+.main-title{
+    color: blue;
+    font-family: monospace;
+    font-size: 100px;
+    animation: fadeInDown 1.5s ease-in-out;
+
+}
+
+.use{
+    color: blue;
+    font-family: monospace;
+    font-size: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+  
+}
+
+.welcome{
+    color: blue;
+    font-family: monospace;
+    font-size: 50px;
+    animation: fadeInUp 1.5s ease-in-out;
+  
+
+}
+
+.link{
+    color: rgb(12, 0, 145);
+    font-family: monospace;
+    font-size: 15px;
+    background-color: rgb(0, 217, 255);
+     padding: 10px;
+     border-radius: 21px;
+     font-weight: bolder;
+     text-decoration: none;
+     animation: fadeInUp 1.5s ease-in-out;
+  
+     
+     
+}
+
+.link:hover{
+ color: rgb(0, 217, 255);
+ background-color: rgb(0, 17, 255);
+ box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}

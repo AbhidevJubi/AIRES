@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Resume</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/upload.css')}}"
+    />
+  </head>
+  <body>
+    <h1 class="main-title">Upload Your Resume</h1>
+    <form method="POST">
+      <label class="use" for="user_name">Name:</label><br />
+      <input
+        class="name-input"
+        type="text"
+        id="user_name"
+        name="user_name"
+        required
+      /><br /><br />
+
+      <label class="use" for="resume_text">Resume Text:</label><br />
+      <textarea
+        id="resume_text"
+        name="resume_text"
+        rows="6"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <label class="use" for="job_description">Job Description:</label><br />
+      <textarea
+        id="job_description"
+        name="job_description"
+        rows="6"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <button class="link" type="submit">Submit</button>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <nav>
+      <a class="link2" href="/results">View Uploaded Resumes</a>
+    </nav>
+    <br /><br />
+    <a
+      class="link2"
+      href="/"
+      style="font-size: 20px; text-decoration: none; color: blue"
+      >Home</a
+    >
+  </body>
+</html>

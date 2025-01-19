@@ -1,0 +1,31 @@
+/* Apply Flexbox layout to the entire page */
+html,
+body {
+  height: 100%; /* Ensure body takes full height of viewport */
+  margin: 0; /* Remove default margin */
+
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  font-family: Arial, sans-serif; /* Font style */
+  background-color: #cafffa; /* Background color */
+  align-content: center;
+}
+
+div.content {
+  background-color: #fff; /* White background for content */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make sure the text is centered vertically, especially if it overflows */
+h1,
+p,
+button {
+  margin-bottom: 10px; /* Add some space between elements */
+}
